@@ -566,7 +566,7 @@ ArCameraCollection::CommandInfo *ArCameraCollection::findCommandInfo
 {
   CameraInfo *cameraInfo = findCameraInfo(cameraName);
   if (cameraInfo == NULL) {
-    return false;
+    return nullptr;
   }
 
   CommandInfo *info = NULL;
@@ -588,7 +588,7 @@ ArCameraCollection::ParamInfo *ArCameraCollection::findParamInfo
 {
   CameraInfo *cameraInfo = findCameraInfo(cameraName);
   if (cameraInfo == NULL) {
-    return false;
+    return nullptr;
   }
 
   ParamInfo *info = NULL;
