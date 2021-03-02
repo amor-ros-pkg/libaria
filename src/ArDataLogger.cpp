@@ -55,7 +55,7 @@ AREXPORT ArDataLogger::ArDataLogger(ArRobot *robot, const char *fileName) :
     myPermanentFileName = fileName;
   myRobot->addUserTask("DataLogger", 50, &myUserTaskCB);
   myRobot->requestIOPackets();
-  myConfig = false;
+  myConfig = nullptr;
   myAddToConfigAtConnect = false;
   myAddedToConfig = false;
   myConfigLogging = false;

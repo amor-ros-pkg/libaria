@@ -200,7 +200,7 @@ AREXPORT ArGPS* ArGPSConnector::createGPS(ArRobot *robot)
       // Setup serial connection
       ArSerialConnection *serialCon = new ArSerialConnection;
       ArLog::log(ArLog::Normal, "ArGPSConnector: Connecting to GPS on port %s at %d baud...", myPort, myBaud);
-      if (!serialCon->setBaud(myBaud)) { delete serialCon; return false; }
+      if (!serialCon->setBaud(myBaud)) { delete serialCon; return nullptr; }
       if (serialCon->open(myPort) != 0) {
         ArLog::log(ArLog::Terse, "ArGPSConnector: Error: could not open GPS serial port %s.", myPort);
         delete serialCon;
